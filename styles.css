@@ -1,0 +1,47 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    font-family: Arial, sans-serif;
+}
+
+.scene {
+    position: relative;
+    width: 80vw;
+    height: 40vh;
+}
+
+#word {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 8vw;
+    font-weight: bold;
+    line-height: 1;
+}
+
+#word span {
+    position: relative;
+    display: inline-block;
+}
+
+#bear {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    left: 100%;
+    animation: move 12s linear infinite;
+    offset-path: path("M100% 100% L92% 85% L88% 65% L84% 85% L80% 100% L76% 100% L72% 70% L68% 50% L64% 70% L60% 100% L56% 100% L52% 80% L48% 60% L44% 80% L40% 100% L36% 100% L32% 75% L28% 55% L24% 75% L20% 100% L16% 100% L12% 85% L8% 65% L4% 85% L0% 100%");
+}
+
+@keyframes move {
+    from { offset-distance: 0%; }
+    to { offset-distance: 100%; }
+}
